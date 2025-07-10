@@ -64,7 +64,9 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(float amount)
     {
-        currentHp -= amount;
+        float dmg = Random.Range(amount * 0.8f, amount * 1.2f);
+
+        currentHp -= dmg;
         if (currentHp <= 0)
             Die();
     }
